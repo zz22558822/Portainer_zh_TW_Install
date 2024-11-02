@@ -54,7 +54,6 @@ sudo rm -f "$SCRIPT_DIR/data.zip"
 echo "--------------------------------------------"
 echo "--->>> 正在設定資料權限..."
 echo "--------------------------------------------"
-sudo chmod -R 777 "/opt/portainer_data"
 sudo chmod -R 777 "/opt/portainer_zhTW"
 
 # 8. 安裝 Portainer Docker 容器
@@ -78,7 +77,7 @@ sudo docker update --restart unless-stopped portainer
 # 10. 顯示訪問路徑
 SERVER_IP=$(hostname -I | awk '{print $1}' | sed 's/[[:space:]]//g')
 echo "--------------------------------------------"
-echo "--->>> 訪問路徑: http://${SERVER_IP}:${USER_PORT}"
+echo "--->>> 訪問路徑: https://${SERVER_IP}:${USER_PORT}"
 echo ""
 echo "--->>> portainer 安裝完成。"
 echo "--------------------------------------------"
