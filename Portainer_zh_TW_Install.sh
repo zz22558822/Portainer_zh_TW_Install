@@ -6,8 +6,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # 1. 讓用戶選擇端口號
 echo "--------------------------------------------"
 while true; do
-    read -p "--->>> 請輸入 Docker 服務的 Port (預設 80): " USER_PORT
-    USER_PORT=${USER_PORT:-80}  # 若未輸入則設置為 80
+    read -p "--->>> 請輸入 Docker 服務的 Port (預設 443): " USER_PORT
+    USER_PORT=${USER_PORT:-443}  # 若未輸入則設置為 443
 
     # 檢查輸入的 Port 是否為有效的數字且在範圍內
     if [[ "$USER_PORT" =~ ^[0-9]+$ ]] && ((USER_PORT >= 1 && USER_PORT <= 65535)); then
